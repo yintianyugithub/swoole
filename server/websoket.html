@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+    var wsServer = 'ws://127.0.0.1:9502';
+    var webSorket = new WebSocket(wsServer)
+    webSorket.onopen = function (evt) {
+        console.log("Connect to Websorket server.");
+    }
+    webSorket.onclose = function (evt) {
+        console.log("Disconnected");
+    }
+    webSorket.onmessage = function (evt) {
+        console.log('Retrieded data from server:' + evt);
+    }
+    webSorket.onerror = function (evt, e) {
+        console.log('Error occured:' + evt.data);
+        console.log(e);
+    }
+</script>

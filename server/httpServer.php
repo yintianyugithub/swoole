@@ -13,6 +13,8 @@ $http->on('request', function ($request, $response) {
 $http->on('request',function ($request, $response){
     list($controller, $action) = explode('/', trim($request->server['request_uri'], '/'));
     var_dump($controller,$action);
+    $response->header("Content-Type", "text/html; charset=utf-8");
+    $response->end("this is test of http server". rand(1000,9999));
 });
 
 $http->start();
