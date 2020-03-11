@@ -12,18 +12,20 @@
 </html>
 <script type="text/javascript">
     var wsServer = 'ws://127.0.0.1:9502';
-    var webSorket = new WebSocket(wsServer)
-    webSorket.onopen = function (evt) {
-        console.log("Connect to Websorket server.");
-    }
-    webSorket.onclose = function (evt) {
+    var websocket = new WebSocket(wsServer);
+    websocket.onopen = function (evt) {
+        console.log("Connected to WebSocket server.");
+    };
+
+    websocket.onclose = function (evt) {
         console.log("Disconnected");
-    }
-    webSorket.onmessage = function (evt) {
-        console.log('Retrieded data from server:' + evt);
-    }
-    webSorket.onerror = function (evt, e) {
-        console.log('Error occured:' + evt.data);
-        console.log(e);
-    }
+    };
+
+    websocket.onmessage = function (evt) {
+        console.log('Retrieved data from server: ' + evt.data);
+    };
+
+    websocket.onerror = function (evt, e) {
+        console.log('Error occured: ' + evt.data);
+    };
 </script>
