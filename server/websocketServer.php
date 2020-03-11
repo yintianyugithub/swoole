@@ -6,7 +6,7 @@ class websocketServer
 
     public function __construct()
     {
-        $this->server = new Swoole\WebSocket\Server('0.0.0.0',9052);
+        $this->server = new Swoole\WebSocket\Server('0.0.0.0',9502);
         $this->server->on('open', function (Swoole\WebSocket\Server $server, $request) {
             echo "server: handshake success with fd{$request->fd}\n";
         });
