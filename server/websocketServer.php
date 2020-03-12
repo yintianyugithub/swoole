@@ -11,7 +11,10 @@ class websocketServer
         /**
          * 客户端与服务端握手完成后回调
          */
-        $this->server->on('open',onOpen);
+        $this->server->on('open',function (Swoole\WebSocket\Server $server, $request) {
+            echo "server: handshake success with fd{$request->fd}\n";
+            $server->push($request->header['host']);
+        });
 
         /**
          * 服务器接收客户端的数据帧后回调
@@ -40,14 +43,6 @@ class websocketServer
             }
         });
         $this->server->start();
-    }
-
-    /**
-     * onOpen
-     */
-    public  function onOpen (Swoole\WebSocket\Server $server, $request) {
-        echo "server: handshake success with fd{$request->fd}\n";
-        $server->push($request->header['host']);
     }
 }
 
