@@ -26,6 +26,6 @@ hs_err_pid*
 
 /log/
 /target/
-/.idea/
+.idea/
 /cbank.iml
 
