@@ -14,13 +14,17 @@
     var wsServer = 'ws://39.98.137.25:9502';
     var webSorket = new WebSocket(wsServer)
     webSorket.onopen = function (evt) {
-        console.log("Connect to Websorket server.");
+        console.log("Connect to Websorket server." + evt);
+        webSorket.send('hello');
     }
     webSorket.onclose = function (evt) {
         console.log("Disconnected");
     }
     webSorket.onmessage = function (evt) {
-        console.log('Retrieded data from server:' + evt);
+        console.log('Retrieded data from server:' + evt.data);
+    }
+    webSorket.onrequest = function (evt) {
+        console.log("onrequest:" + evt);
     }
     webSorket.onerror = function (evt, e) {
         console.log('Error occured:' + evt.data);
