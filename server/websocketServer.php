@@ -27,7 +27,7 @@ class websocketServer
         $this->server->on('close', function ($ser, $fd) {
             echo "client {$fd} closed\n";
         });
-
+        
         $this->server->on('request', function ($request, $response) {
             // 接收http请求从get获取message参数的值，给用户推送
             $response->end("hello" . $request->header['x-real-ip']);
