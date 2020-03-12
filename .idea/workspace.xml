@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3a403db-b71e-4d23-bd39-42dbd08932ad" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/websocket.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/websocket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/websocketServer.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/websocketServer.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,46 +18,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/httpClient.php">
+        <entry file="file://$PROJECT_DIR$/server/websocket.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/httpServer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+            <state relative-caret-position="240">
+              <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/websocket.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/test.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/websocketServer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="12" column="89" lean-forward="true" selection-start-line="12" selection-start-column="89" selection-end-line="12" selection-end-column="89" />
+            <state relative-caret-position="346">
+              <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -81,8 +56,8 @@
         <option value="$PROJECT_DIR$/a.php" />
         <option value="$PROJECT_DIR$/httpServer.php" />
         <option value="$PROJECT_DIR$/server/websoket.html" />
-        <option value="$PROJECT_DIR$/server/websocketServer.php" />
         <option value="$PROJECT_DIR$/server/websocket.html" />
+        <option value="$PROJECT_DIR$/server/websocketServer.php" />
       </list>
     </option>
   </component>
@@ -156,12 +131,12 @@
       <option name="presentableId" value="Default" />
       <updated>1583734467864</updated>
       <workItem from="1583734469461" duration="14509000" />
-      <workItem from="1583980212752" duration="2268000" />
+      <workItem from="1583980212752" duration="5996000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16777000" />
+    <option name="totallyTimeSpent" value="20505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -224,10 +199,10 @@
     <entry file="file://$PROJECT_DIR$/server/index.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/httpClient.php">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="485400">
+          <caret line="16193" column="41" selection-start-line="16193" selection-start-column="41" selection-end-line="16193" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -238,17 +213,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+    <entry file="file://$PROJECT_DIR$/server/httpClient.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485400">
-          <caret line="16193" column="41" selection-start-line="16193" selection-start-column="41" selection-end-line="16193" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/websocketServer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" column="89" lean-forward="true" selection-start-line="12" selection-start-column="89" selection-end-line="12" selection-end-column="89" />
+        <state relative-caret-position="300">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -261,8 +229,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/websocket.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        <state relative-caret-position="240">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/websocketServer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
         </state>
       </provider>
     </entry>
