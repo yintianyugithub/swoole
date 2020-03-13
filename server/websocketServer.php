@@ -22,7 +22,7 @@ class websocketServer
          */
         $this->server->on('close', [$this, 'onClose']);
         /**
-         *comet方案处理长连接
+         *comet方案处理长连接  必须是http请求
          */
         $this->server->on('request', [$this, 'onRequest']);
         $this->server->start();
@@ -63,11 +63,12 @@ class websocketServer
 
         // $this->server->connections 遍历所有websocket连接用户的fd，给所有用户推送
         foreach ($this->server->connections as $fd) {
-            $respose->send("hello {$fd}");
+            $respose->push("hello {$fd}");
             // 需要先判断是否是正确的websocket连接，否则有可能会push失败
             if ($this->server->isEstablished($fd)) {
                 $this->server->push($fd, $request->get['message']);
             }
+            $respose->end("你好{$request->server['path_info']},结束请求处理");
         }
     }
 }
