@@ -23,6 +23,8 @@ class websocketServer
 
         //comet方案处理长连接  必须是http请求
         $this->server->on('request', [$this, 'onRequest']);
+        //设置异步任务的工作进程数量
+        $this->server->set(array('task_worker_num' => 4));
         $this->server->start();
     }
 
@@ -80,8 +82,8 @@ class websocketServer
 
     function onReceive($server, $fd, $fromId, $data)
     {
-        echo 'task arrived go to';
-        $server->task();
+        $taskId = $server->task();
+        echo 'task arrived go to'.$taskId;
     }
 
     function onTask($server, $taskId, $fromId, $data)
