@@ -59,15 +59,15 @@ class websocketServer
      */
     function onRequest($request,$respose)
     {
-        global $server;
         // 接收http请求从get获取message参数的值，给用户推送
 
         // $this->server->connections 遍历所有websocket连接用户的fd，给所有用户推送
-        foreach ($server->connections as $fd) {
+        foreach ($this->server->connections as $fd) {
+            var_dump($respose);
             $respose->push("hello {$fd}");
             // 需要先判断是否是正确的websocket连接，否则有可能会push失败
-            if ($server->isEstablished($fd)) {
-                $server->push($fd, $request->get['message']);
+            if ($this->server->isEstablished($fd)) {
+                $this->server->push($fd, $request->get['message']);
             }
             $respose->header('Content-Type','text/html; charset=utf-8',true);
             $respose->end("你好{$request->server['path_info']},结束请求处理");
