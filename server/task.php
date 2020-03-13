@@ -15,6 +15,7 @@ $server->on('receive', function ($ser, $fd, $from_id, $data) use ($a, $b, $c) {
 $server->on('task', function ($ser, $f, $fromId, $data) {
     $ser->finish($data);
 });
+
 $server->on('finish', function ($server, $task_id, $data) {
     echo "[{$task_id}] finished :{$data}" . PHP_EOL;
 });
