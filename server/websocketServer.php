@@ -11,9 +11,7 @@ class websocketServer
         /**
          * 客户端与服务端握手完成后回调
          */
-        $this->server->on('open',function ($server, $request) {
-            echo "server: handshake success with fd{$request->fd}\n";
-        });
+        $this->server->on('open','onOPen');
 
         /**
          * 服务器接收客户端的数据帧后回调
@@ -42,6 +40,13 @@ class websocketServer
             }
         });
         $this->server->start();
+    }
+
+    /**
+     * onOpen
+     */
+    function onOpen ($server, $request) {
+        echo "server: handshake success with fd{$request->fd}\n";
     }
 }
 
