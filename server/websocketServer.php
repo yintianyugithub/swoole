@@ -72,7 +72,7 @@ class websocketServer
             // 需要先判断是否是正确的websocket连接，否则有可能会push失败
             if ($this->server->isEstablished($fd) && $request->server['request_uri'] != '/favicon.ico') {
                 $respose->header('Content-Type', 'text/html; charset=utf-8', true);
-//                $this->server->push($fd, $request->get['message']);
+                $this->server->push($fd, $request->get['message']);
                 $respose->end("你好{$request->server['path_info']},结束请求处理");
             }
         }
@@ -80,6 +80,7 @@ class websocketServer
 
     function onReceive($server, $fd, $fromId, $data)
     {
+        echo 'task arrived go to';
         $server->task();
     }
 
