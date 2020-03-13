@@ -57,20 +57,20 @@ class websocketServer
     /**
      * onRequest
      */
-    function onRequest($request,$respose)
+    function onRequest($request, $respose)
     {
-        var_dump($request);
-        var_dump($this->server);
+//        var_dump($request);
+//        var_dump($this->server);
         // 接收http请求从get获取message参数的值，给用户推送
         var_dump($this->server->get['message']);
         // $this->server->connections 遍历所有websocket连接用户的fd，给所有用户推送
         foreach ($this->server->connections as $fd) {
             // 需要先判断是否是正确的websocket连接，否则有可能会push失败
             if ($this->server->isEstablished($fd) && $request->server['request_uri'] != '/favicon.ico') {
+                $respose->header('Content-Type', 'text/html; charset=utf-8', true);
                 $this->server->push($fd, $request->get['message']);
+                $respose->end("你好{$request->server['path_info']},结束请求处理");
             }
-            $respose->header('Content-Type','text/html; charset=utf-8',true);
-            $respose->end("你好{$request->server['path_info']},结束请求处理");
         }
     }
 }
