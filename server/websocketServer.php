@@ -11,7 +11,7 @@ class websocketServer
         /**
          * 客户端与服务端握手完成后回调
          */
-        $this->server->on('open','onOPen');
+        $this->server->on('open','onOpen');
 
         /**
          * 服务器接收客户端的数据帧后回调
