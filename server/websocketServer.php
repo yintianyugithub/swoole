@@ -21,7 +21,9 @@ class websocketServer
          * 客户端关闭连接
          */
         $this->server->on('close', [$this, 'onClose']);
-
+        /**
+         *comet方案处理长连接
+         */
         $this->server->on('request', [$this, 'onRequest']);
         $this->server->start();
     }
@@ -58,9 +60,10 @@ class websocketServer
     function onRequest($request,$respose)
     {
         // 接收http请求从get获取message参数的值，给用户推送
-        var_dump($this->server->get);
+
         // $this->server->connections 遍历所有websocket连接用户的fd，给所有用户推送
         foreach ($this->server->connections as $fd) {
+            $respose->send("hello {$fd}");
             // 需要先判断是否是正确的websocket连接，否则有可能会push失败
             if ($this->server->isEstablished($fd)) {
                 $this->server->push($fd, $request->get['message']);
