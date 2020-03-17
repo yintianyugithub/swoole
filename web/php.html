@@ -15,74 +15,50 @@
     <link rel="shortcut icon" href="./favicon.ico">
     <script src="./js/jquery-3.3.1.min.js"></script>
     <style>
-        .match > h2 {
+        body {
+            background: #eee;
+        }
+        .login {
+            text-align: center;
+            margin-top: 8vh;
+            padding: 20px;
+        }
+        .login h2 {
             font-size: 1.2rem;
-            color: #292929;
-            height: 2.1rem;
-            line-height: 2.1rem;
-            padding: 0 .5rem;
-            background: #e9e9e9;
+            margin-bottom: 1rem;
         }
-        .match-item {
-            display: flex;
-            padding: 6px;
-            border-bottom: 1px solid #eee;
+        .login-item {
+            font-size: 0;
+            background: #fff;
+            padding-left: 1rem;
+            border: 1px solid #eee;
         }
-        /* .match-item:last-child {
+        /*避免两个输入框间的border重叠*/
+        .login-item:last-child {
+            border-top: 0;
+        }
+        input, button {
+            width: 100%;
             border: none;
-        } */
-        .match-item-info, .match-item-teams, .match-item-result {
-            height: 70px;
-            padding: 5px;
+            outline: none;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.2rem;
+            color: #333;
+            background: transparent;
         }
-        .match-item-info {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            color: #888;
-            font-size: 1rem;
+        .phone-num {
+            width: 70%;
         }
-        .match-item-info .match-time {
-            vertical-align: middle;
-            color: #404040;
-        }
-        .match-item-teams {
-            flex: 2;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            font-size: 1.1rem;
-            color: #404040;
-        }
-        .match-item-teams > div {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            vertical-align: middle;
-            padding: 3px;
-        }
-        /*team的比分*/
-        .match-item-teams > div span:last-child {
-            color: #888;
-        }
-        .match-item-teams.isLive > div span:last-child {
-            color: red;
-        }
-        /*视频是否处于直播状态*/
-        .match-item .match-item-result {
-            font-size: .8rem;
-            width: 85px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            color: #888;
-        }
-        .match-item .match-item-result.isLive {
-            color: red;
-        }
-        .match-item .match-item-result > div:first-child {
-            font-size: 1rem;
+        /*获取验证码的button*/
+        .login-item button {
+            width: 30%;
+            padding: 0 10px;
+            background: none;
+            color: inherit;
+            display: inline-block;
+            background: ghostwhite;
+            border-left: 1px solid #eee;
         }
     </style>
 </head>
@@ -93,26 +69,30 @@
         <!--用户处于登录状态时，将该按钮隐藏-->
         <a href="./php.html">
             <!-- <i class="icon iconfont icon-wode my"></i> -->
-            <span class="my">文档</span>
+            <span class="my">明天计划</span>
         </a>
     </header>
-    <table>
-        <tr>
+    <div class="login" id="form">
+        <h2>历史文档</h2>
+        <div class="login-item">
             <a href="https://www.php.net/">php官网</a>
-        </tr>
-        <tr>
+        </div>
+        <div class="login-item">
             <a href="https://www.kancloud.cn/manual/thinkphp5/118003">tp5官网</a>
-        </tr>
-        <tr>
-            <a href="https://learnku.com/docs/psr">php规范</a>
-        </tr>
-        <tr>
+        </div>
+        <div class="login-item">
+            <a href="https://www.kancloud.cn/manual/thinkphp5/118003">tp5官网</a>
+        </div>
+        <div class="login-item">
+            <a href="https://learnku.com/docs/psr">php-PSR规范</a>
+        </div>
+        <div class="login-item">
             <a href="https://blog.csdn.net/m290345792/article/details/89371789">ubuntu18.04安装php7.X</a>
-        </tr>
-        <tr>
+        </div>
+        <div class="login-item">
             <a href="https://www.jianshu.com/p/ca3f65117217">编译安装php7.X</a>
-        </tr>
-    </table>
+        </div>
+    <div/>
 </div>
 </body>
 </html>
