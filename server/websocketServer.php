@@ -87,13 +87,13 @@ class websocketServer
 
     function onReceive($server, $fd, $fromId, $data)
     {
-        $taskId = $server->task();
+        $taskId = $server->task($data);
         echo 'task arrived go to'.$taskId;
     }
 
     function onTask($server, $taskId, $fromId, $data)
     {
-        
+
         echo "from :$fromId";
         echo 'this is task'.$taskId;
         var_dump($data);
